@@ -29,12 +29,13 @@
 					{{ if gt .Params.tags 0 }}
 						<ul class="flat">
 							{{ range .Params.tags }}
-							<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+							<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 							{{ end }}
-						</ul>
+						</ul> <br>
 					{{ end }}
 				{{ end }}
 			</div>
+
 
 			{{- if .Site.DisqusShortname -}}
 			{{- $.Scratch.Set "isDisqus" true -}}
